@@ -1,0 +1,13 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Valuation Adjustment",
+  "enabled": 1,
+  "modified": "2024-09-18 11:56:20.909570",
+  "module": "Electronics",
+  "name": "Valuation Adjustment",
+  "script": "frappe.ui.form.on('Valuation Adjustment', {\n    refresh: function(frm) {\n        // Hide the progress bar initially\n        if (frm.fields_dict['progress_bar']) {\n            frm.fields_dict['progress_bar'].hide();\n        }\n    },\n\n    onload: function(frm) {\n        // Add the progress bar to the form if not already present\n        if (!frm.fields_dict['progress_bar']) {\n           frm.fields_dict['progress_bar'] = $('<div class=\"progress\" style=\"display: none; height: 25px; width: 70%; margin: 0 auto; position: fixed; top: 30px; left: 15%; z-index: 9999;\"><div id=\"progress-bar\" class=\"progress-bar\" role=\"progressbar\" style=\"width: 0%; background-color: #007bff; color: #fff;\" aria-valuenow=\"0\" aria-valuemin=\"0\" aria-valuemax=\"100\">0%</div></div>').appendTo(frm.$wrapper);\n        }\n    },\n\n    before_submit: function(frm) {\n        // Show the progress bar when the submit button is clicked\n        if (frm.fields_dict['progress_bar']) {\n            frm.fields_dict['progress_bar'].show();\n        }\n    },\n\n    before_save: function(frm) {\n        // Show the progress bar when the save button is clicked\n        if (frm.fields_dict['progress_bar']) {\n            frm.fields_dict['progress_bar'].show();\n        }\n    }\n});\n\nfrappe.realtime.on('valuation_adjustment_progress', (data) => {\n    let progress = data.progress;\n    let progressBar = $('#progress-bar');\n    console.log(`Progress received: ${progress}%`); // Add this for logging\n    progressBar.css('width', progress + '%');\n    progressBar.attr('aria-valuenow', progress);\n    progressBar.text(progress + '%');\n});\n",
+  "view": "Form"
+ }
+]

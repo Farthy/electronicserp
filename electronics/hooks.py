@@ -1,8 +1,8 @@
 app_name = "electronics"
-app_title = "Electronics"
-app_publisher = "farthy@upeosoft.com"
-app_description = "yes"
-app_email = "farthy@upeosoft.com"
+app_title = "electronics"
+app_publisher = "Farthy"
+app_description = "Electronics"
+app_email = "senelwafarthy@gmail.com"
 app_license = "mit"
 
 # Apps
@@ -242,3 +242,14 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+# hooks.py
+
+doc_events = {
+    "Material Request": {
+        "on_submit": "electronics.services.rest.create_task_and_notify_manager"
+    }
+}
+fixtures = [
+    "Client Script",
+    "Valuation Rate Adjustment Document",
+    ]

@@ -1,0 +1,51 @@
+{
+  "actions": [],
+  "allow_rename": 1,
+  "creation": "2024-09-07 14:29:52.704408",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": ["item_code", "valuation_rate", "current_valuation_rate"],
+  "fields": [
+    {
+      "fieldname": "valuation_rate",
+      "fieldtype": "Currency",
+      "in_list_view": 1,
+      "in_preview": 1,
+      "in_standard_filter": 1,
+      "label": "Valuation Rate",
+      "reqd": 1
+    },
+    {
+      "fieldname": "current_valuation_rate",
+      "fieldtype": "Currency",
+      "in_list_view": 1,
+      "in_preview": 1,
+      "in_standard_filter": 1,
+      "label": "Current Valuation Rate",
+      "read_only": 1
+    },
+    {
+      "fieldname": "item_code",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "in_preview": 1,
+      "in_standard_filter": 1,
+      "label": "Item Code",
+      "options": "Item",
+      "reqd": 1
+    }
+  ],
+  "index_web_pages_for_search": 1,
+  "istable": 1,
+  "links": [],
+  "modified": "2024-09-07 15:08:31.067932",
+  "modified_by": "Administrator",
+  "module": "Electronics",
+  "name": "Valuation Adjustment Item",
+  "owner": "Administrator",
+  "permissions": [],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": []
+}

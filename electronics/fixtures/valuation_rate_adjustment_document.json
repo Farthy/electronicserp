@@ -1,0 +1,23 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Valuation Rate Adjustment Document",
+  "document_name": "Bin",
+  "modified": "2024-09-11 14:41:03.403738",
+  "name": "Bin"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Valuation Rate Adjustment Document",
+  "document_name": "Item",
+  "modified": "2024-09-11 14:41:11.920611",
+  "name": "Item"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Valuation Rate Adjustment Document",
+  "document_name": "Stock Ledger Entry",
+  "modified": "2024-09-11 14:41:20.293453",
+  "name": "Stock Ledger Entry"
+ }
+]
