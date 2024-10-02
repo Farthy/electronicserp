@@ -1,3 +1,7 @@
+Find tests in test_valuation_adjustment file which is in the Valuation_Adjustment Doctype and test.py in the Services folder
+
+
+
 ![Screenshot from 2024-09-13 16-04-23](https://github.com/user-attachments/assets/96a6a58b-69c3-4a92-a4a9-11615e886072)
 
 Valuation adjustment implementation is important as valuation rate may change at some point due to dynamic of the business and you may be required to review the pricess of commodies, I have implemented it through code that allows to adjust the valuation and you can also undo the valuation, and this changes the valuation prices in the following documents:: Item, Bin, Stock Ledger Entry
